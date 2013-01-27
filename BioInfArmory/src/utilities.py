@@ -1,6 +1,12 @@
-def codon_to_protein_dct():
-        with file('RNA_codon_list.txt', 'r') as f:
-            return dict(line.split() for line in f.read().strip().split('\n'))
+def create_dct_from_file(filename):
+    """
+    The file can only have two values per line.
+    The first value on each line becomes the key and the second is the value.
+    Keys/values remain strings.
+    """
+    with file(filename, 'r') as f:
+        return dict(line.split() for line in f.read().strip().split('\n'))
+codon_to_protein_dct = create_dct_from_file('RNA_codon_list.txt')
 
 class FASTA_Dataset(object):
     r"""

@@ -11,11 +11,10 @@ def translate_to_protein_string(sequence=None):
     """
     if not sequence:
         sequence = stdin.next().strip()
-    codon_dct = codon_to_protein_dct()
     protein_list = []
     for codon_start_index in range(0, len(sequence), 3):
         codon = sequence[codon_start_index:codon_start_index + 3]
-        protein = codon_dct[codon]
+        protein = codon_to_protein_dct[codon]
         if protein == 'Stop':
             break
         protein_list.append(protein)

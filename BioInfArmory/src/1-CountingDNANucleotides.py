@@ -3,11 +3,11 @@
 from sys import stdin, argv
 from collections import Counter
 
-def CountDNANucleotides(sequence=None):
+def count_dna_nucleotides(sequence=None):
     """
     Given test:
     >>> seq = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
-    >>> CountDNANucleotides(seq)
+    >>> count_dna_nucleotides(seq)
     20 12 17 21
     """
     if not sequence:
@@ -21,4 +21,4 @@ if __name__ == '__main__':
         import doctest
         doctest.testmod()
     else:
-        CountDNANucleotides()
+        count_dna_nucleotides()

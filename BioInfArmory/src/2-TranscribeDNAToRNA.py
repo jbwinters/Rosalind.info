@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 from sys import stdin, argv
 
-def TranscribeDNA(sequence=None):
+def transcribe_dna(sequence=None):
     """
     Given test:
     >>> seq = 'GATGGAACTTGACTACGTAAATT'
-    >>> TranscribeDNA(seq)
+    >>> transcribe_dna(seq)
     GAUGGAACUUGACUACGUAAAUU
     """
     if not sequence:
@@ -19,4 +19,4 @@ if __name__ == '__main__':
         import doctest
         doctest.testmod()
     else:
-        TranscribeDNA()
+        transcribe_dna()

@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 from sys import stdin, argv
 
-def ComplementDNA(sequence=None):
+def complement_dna(sequence=None):
     """
     Given test:
     >>> seq = 'AAAACCCGGT'
-    >>> ComplementDNA(seq)
+    >>> complement_dna(seq)
     'ACCGGGTTTT'
     """
     if not sequence:
@@ -23,4 +23,4 @@ if __name__ == '__main__':
         import doctest
         doctest.testmod()
     else:
-        print ComplementDNA()
+        print complement_dna()

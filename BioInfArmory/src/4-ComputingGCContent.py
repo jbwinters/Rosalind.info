@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from sys import stdin, argv
-from labeling import FASTA_Dataset
+from utilities import FASTA_Dataset
 from collections import Counter
 from decimal import *
 

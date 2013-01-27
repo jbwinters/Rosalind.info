@@ -1,3 +1,6 @@
+def codon_to_protein_dct():
+        with file('RNA_codon_list.txt', 'r') as f:
+            return dict(line.split() for line in f.read().strip().split('\n'))
 
 class FASTA_Dataset(object):
     r"""

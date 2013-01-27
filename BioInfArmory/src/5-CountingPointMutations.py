@@ -13,10 +13,7 @@ def count_point_mutations(sequences=None):
         sequences = stdin.read()
     sequences = sequences.split('\n')
 
-    differences = 0
-    for n1, n2 in zip(sequences[0], sequences[1]):
-        if n1 != n2:
-            differences += 1
+    differences = sum(n1 != n2 for n1, n2 in zip(sequences[0], sequences[1]))
     print differences
 
 if __name__ == '__main__':

@@ -1,3 +1,42 @@
+
+def substrings(s, reverse=False, tried=None):
+    """
+    Generates unique substrings ordered by descending string length
+    or ascending string length if reverse == True
+    >>> for s in substrings('aaab'):
+    ...     print s
+    aaab
+    aaa
+    aab
+    aa
+    ab
+    a
+    b
+    >>> for s in substrings('abc', reverse=True):
+    ...     print s
+    a
+    b
+    c
+    ab
+    bc
+    abc
+    """
+    if not s:
+        return
+    if not tried:
+        tried = set()
+    window_range = xrange(len(s), 0, -1)
+    if reverse:
+        window_range = xrange(1, len(s)+1)
+    for window_size in window_range:
+        for i in xrange(len(s)):
+            if i + window_size > len(s):
+                continue
+            sub = s[i:i+window_size]
+            if sub not in tried:
+                tried.add(sub)
+                yield sub
+
 def create_dct_from_file(filename):
     """
     The file can only have two values per line.

@@ -6,6 +6,7 @@ from utilities import substrings
 def longest_common_substring(strings=None):
     r"""
     Not a very efficient solution
+    A much better solution uses a binary search to find the length of the lcs
 
     Given test:
     >>> strings = '''GATTACA
